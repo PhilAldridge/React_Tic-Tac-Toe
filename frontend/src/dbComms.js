@@ -1,5 +1,7 @@
+const uri = "http://localhost:5050/record";
+
 export async function createGame() {
-    const response = await fetch("http://localhost:5050/record", {
+    const response = await fetch(uri, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -16,7 +18,7 @@ export async function createGame() {
 }
 
 export async function connectToGame(codeInput){
-  const response = await fetch(`http://localhost:5050/record/${codeInput}`, {
+  const response = await fetch(uri+`/${codeInput}`, {
     method: "PATCH",
     body: JSON.stringify({id:codeInput}),
     headers: {
@@ -29,7 +31,7 @@ export async function connectToGame(codeInput){
 }
 
 export async function updateGameState(newState, lastMove, gameId){
-  const response = await fetch(`http://localhost:5050/record/${gameId}`, {
+  const response = await fetch(uri+`/${gameId}`, {
     method: "PATCH",
     body: JSON.stringify({id:gameId, newState: newState, lastMove: lastMove}),
     headers: {

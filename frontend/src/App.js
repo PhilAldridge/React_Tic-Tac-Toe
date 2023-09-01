@@ -23,16 +23,27 @@ export default function App() {
     const  login = async () => {
         // Authenticate anonymously
         
-        await  app.logIn(Realm.Credentials.anonymous());
-      
+        try {
+          await  app.logIn(Realm.Credentials.anonymous());
+        } catch(error) {
+          console.log(error)
+        }
         
         // Connect to the database
         const  mongodb = app.currentUser.mongoClient("mongodb-atlas");
         const  collection = mongodb.db("games").collection("games");
+        
+        
         // Everytime a change happens in the stream, add it to the list of events
-        for  await (const  change  of  collection.watch()) {
-          if(change.operationType==="update") setNetworkChange(change);
+        try{
+          for  await (const  change  of  collection.watch()) {
+            console.log(change)
+            if(change.operationType==="update") setNetworkChange(change);
+          }
+        } catch(error) {
+          console.log(error);
         }
+
       }
       login(); 
 

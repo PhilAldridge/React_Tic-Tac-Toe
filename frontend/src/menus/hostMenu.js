@@ -7,7 +7,6 @@ export default function HostMenu({gameId, changeGameId, setStatus, networkChange
     changeGameId(result.insertedId);
     
   }
-  console.log(networkChange);
   if(gameId===""){
     onMount();
   } else if(networkChange &&
