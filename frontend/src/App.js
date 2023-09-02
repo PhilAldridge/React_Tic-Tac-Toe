@@ -49,7 +49,7 @@ export default function App() {
 
       const getRequest = (window.location.search);
       if(getRequest !== ""){
-        startNetworkGame(getRequest.slice(-5));
+        setStatus("joinMenu");
       }
 
   },[]);

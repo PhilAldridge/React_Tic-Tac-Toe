@@ -1,20 +1,25 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { connectToGame } from "../dbComms";
 
+const getRequest = window.location.search.slice(-5);
+
 export default function JoinMenu({ startNetworkGame }) {
-  const [codeInput, setCodeInput] = useState("");
+  const [codeInput, setCodeInput] = useState(getRequest);
   const [joinClicked, setJoinClicked] = useState(null);
+  
+  useEffect(()=>{
+    if(getRequest!=="") {
+      handleJoinClick();
+    }
+  },[]);
 
   function handleInputChange(e) {
     setCodeInput(e.target.value);
   }
 
-  //todo handle joinclicked
-  function handleJoinClick() {
+  const handleJoinClick = useCallback(() => {
+    
     setJoinClicked("looking");
-    //find game
-    //if game found
-    //startNetworkGame
     const result = connectToGame(codeInput);
       result.then(data => {
         if(data.modifiedCount>0){
@@ -25,15 +30,8 @@ export default function JoinMenu({ startNetworkGame }) {
         
       });
 
-  }
-
+  },[codeInput]);
   
-
-  /*useEffect(()=>{
-    if(joinClicked === "looking"){
-      
-    }
-  }, [joinClicked]);*/
 
   return (
     <div>
