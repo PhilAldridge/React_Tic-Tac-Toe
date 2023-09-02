@@ -1,5 +1,5 @@
 //const uri = "http://localhost:5050/record";
-const uri = "https://react-tic-tac-toe-2xrp.vercel.app:5050/record";
+const uri = "https://react-tic-tac-toe-2xrp.vercel.app/:5050/record";
 
 export async function createGame() {
     const response = await fetch(uri, {
