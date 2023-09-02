@@ -50,6 +50,7 @@ h1 {
 
 .highlighted {
   background: yellow;
+  cursor:pointer;
 }
 
 .greyed {
@@ -100,6 +101,7 @@ td {
   font-size: 1rem;
   padding: 0.2rem;
   margin-top: auto;
+  cursor: pointer;
 }
 
 .menuButton {
@@ -112,6 +114,12 @@ td {
   margin: 1.5rem;
   margin-left:auto;
   margin-right: auto;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: #76bdd5;
 }
 
 .container {
@@ -135,6 +143,7 @@ td {
   background: #76bdd5;
   border: 0px;
   border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .headerText {
