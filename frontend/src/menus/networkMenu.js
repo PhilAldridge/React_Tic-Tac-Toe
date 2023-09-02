@@ -3,7 +3,7 @@ export default function NetworkMenu({ setStatus }) {
     <div>
       <h2>Host or Join an online game: </h2>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           setStatus("hostMenu");
         }}
@@ -11,7 +11,7 @@ export default function NetworkMenu({ setStatus }) {
         Host game
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           setStatus("joinMenu");
         }}

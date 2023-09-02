@@ -5,7 +5,7 @@ export default function AiMenu({ togglePlayerisX, playerIsX, robotMenuClick }) {
     <div>
       <h2>Select the AI difficulty level</h2>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           robotMenuClick(1);
         }}
@@ -13,7 +13,7 @@ export default function AiMenu({ togglePlayerisX, playerIsX, robotMenuClick }) {
         Beginner
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           robotMenuClick(2);
         }}
@@ -21,7 +21,7 @@ export default function AiMenu({ togglePlayerisX, playerIsX, robotMenuClick }) {
         Intermediate
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           robotMenuClick(3);
         }}
@@ -29,7 +29,7 @@ export default function AiMenu({ togglePlayerisX, playerIsX, robotMenuClick }) {
         Expert
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           robotMenuClick(4);
         }}

@@ -42,7 +42,7 @@ export default function JoinMenu({ startNetworkGame }) {
         Join code: <input value={codeInput} onChange={handleInputChange} />
       </p>
       <button
-        className="resetButton"
+        className="menuButton"
         disabled={codeInput.length !== 5 || joinClicked==="looking"}
         onClick={handleJoinClick}
       >

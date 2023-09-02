@@ -14,6 +14,8 @@ body {
   font-family: sans-serif;
   text-align: center;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -97,6 +99,19 @@ td {
   font-weight: bold;
   font-size: 1rem;
   padding: 0.2rem;
+  margin-top: auto;
+}
+
+.menuButton {
+  display:block;
+  border-width: 0px;
+  background: lightblue;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin: 1.5rem;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .container {

@@ -3,7 +3,7 @@ export default function WelcomeMenu({ setStatus }) {
     <div>
       <h2>Select game mode:</h2>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           setStatus("localGame");
         }}
@@ -11,7 +11,7 @@ export default function WelcomeMenu({ setStatus }) {
         2 player shared screen
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           setStatus("networkMenu");
         }}
@@ -19,7 +19,7 @@ export default function WelcomeMenu({ setStatus }) {
         2 player online
       </button>
       <button
-        className="resetButton"
+        className="menuButton"
         onClick={() => {
           setStatus("aiMenu");
         }}
