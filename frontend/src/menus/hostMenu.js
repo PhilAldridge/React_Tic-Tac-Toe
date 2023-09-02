@@ -22,7 +22,6 @@ export default function HostMenu({gameId, changeGameId, setStatus, networkChange
         Join code: <input readOnly value={gameId} />
       </p>
       <p>
-        //TODO this doesn't work!
         or <button className="resetButton" onClick={()=>navigator.clipboard.writeText("https://react-tic-tac-toe-2xrp.vercel.app/?gameId="+gameId)}>copy game link</button>
       </p>
       <p>Note: The host always plays as X</p>

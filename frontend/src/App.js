@@ -47,6 +47,11 @@ export default function App() {
       }
       login(); 
 
+      const getRequest = (window.location.search);
+      if(getRequest !== ""){
+        startNetworkGame(getRequest.slice(-5));
+      }
+
   },[]);
 
   function resetApp() {
